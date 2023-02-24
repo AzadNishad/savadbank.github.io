@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>saVad Bank - Login</title>
+    <!-- ---- Fevicon----- -->
+    <link rel="shortcut icon" type="image/jpg" href="img/favicon.png" />
+    <!-- ---------Custom-CSS----------- -->
+    <link rel="stylesheet" href="css/login-style.css">
+    <!-- ------------ ScrollBar CSS ------------- -->
+    <link rel="stylesheet" href="CSS/scrollBar.css">
+    <!-- ------Font Awesome CSS ----------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="login-wrapper">
+            <span><a href="index.html"><i class="fa-sharp fa-regular fa-circle-xmark"></i></a></span>
+            <div class="logo">
+                <img src="img/logo2-removebg-preview.png" alt="">
+            </div>
+            <div class="login-form">
+                <form action="#" method="post" >
+                    <h1>Customer Login</h1>
+                    <div class="form-group">
+                        <input type="text" name="user" id="user" required>
+                        <label for="user">Email/Account no.</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="pass" id="pass" required>
+                        <label for="pass">Password</label>
+                    </div>
+                    <div class="form-group">
+                            <input type="text" title="* is send to your mail." name="sub-otp" id="sub-otp" required>
+                            <label for="sub-otp" title="* is send to your mail.">OTP</label>
+                            <span>
+                                <i class="fa-solid fa-angle-right" id="checkOTP"></i>
+                                <i class="fa-solid fa-check" id="rightOTP"></i>
+                            </span>
+                    </div>
+                    <input type="submit" value="Login">
+                    <div class="form-footer">
+                        <a href="#">Forget Password?</a>
+                        <a href="registration.html">Create New Account</a>
+                    </div>
+                    <span id="notValidMsg"></span>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

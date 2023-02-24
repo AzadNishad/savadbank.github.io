@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&family=Raleway:ital,wght@1,200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background: var(--white-color); */
+    background: #ffe259;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffa751, #ffe259);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffa751, #ffe259);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Oxygen', sans-serif;
+}
+
+/*Declering variable for color */
+:root {
+    --white-color: #FFFFFF;
+    --lightgray-color: #F9F6F7;
+    --lightOrange-color: #FFE8D6;
+    --Orange-color: #FF971D;
+    --black-color: #20262E;
+}
+/* Selection Text Css */
+::selection{
+    background: var(--lightOrange-color);
+    color: var(--black-color);
+}
+/* -------------------------------------------------------- */
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-wrapper{
+    background: var(--white-color);
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 17px rgb(0 0 0 / 30%);
+    overflow: hidden;
+    position: relative;
+    font-size: smaller;
+}
+.login-wrapper span:nth-child(1){
+    position: absolute;
+    /* margin-left: 370px; */
+    font-size: 25px;
+    right: 5px;
+    top: 2px;
+}
+.login-wrapper span:nth-child(1) a{
+    color: gray;
+    transition: .5s;
+}
+.login-wrapper span:nth-child(1) a:hover{
+    color: rgb(99, 99, 99);
+}
+.login-wrapper .logo{
+    width: 100%;
+    height: 100px;
+    background: var(--lightOrange-color);
+    border-radius: 10px 10px 0 30px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-wrapper .logo::after,
+.login-wrapper .logo::before{
+    content: "";
+    background: var(--lightOrange-color);
+    padding: 30px;
+    position: absolute;
+    right: 0;
+    top: 100px;
+}
+.login-wrapper .logo::after{
+    border-radius: 0 30px 0 0;
+    background: var(--white-color);
+}
+.login-wrapper .logo img{
+    width: 200px;
+}
+.login-wrapper .login-form{
+    padding: 50px 20px;
+    box-sizing: border-box;
+}
+.login-wrapper .login-form form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.login-wrapper .login-form h1{
+    /* border: 1px solid #eee; */
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: 1.9px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--lightOrange-color);
+}
+.login-wrapper .login-form .form-group{
+    /* border: 1px solid black; */
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+    font-size: small;
+    position: relative;
+    height: 45px;
+}
+.login-wrapper .login-form .form-group input{
+    outline: none;
+    border: none;
+    background: none;
+    width: 100%;
+    height: 30px;
+    border-bottom: 1px solid var(--Orange-color);
+    padding: 5px 20px;
+    position: absolute;
+    top: 35%;
+    font-size: medium;
+    color: rgb(79, 79, 79);
+    letter-spacing: 1.5px;
+    border-radius: 0 0 20px 20px;
+}
+.login-wrapper .login-form .form-group label{
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    color: var(--black-color);
+    letter-spacing: 1.5px;
+    pointer-events: none;
+    transition: .3s;
+}
+.login-wrapper .login-form .form-group input:focus ~ label,
+.login-wrapper .login-form .form-group input:valid ~ label{
+    top: 5%;
+    font-size: 12px;
+    color: var(--Orange-color);
+}
+.login-wrapper .login-form .form-group span{
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    background: var(--Orange-color);
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: .3s;
+}
+.login-wrapper .login-form .form-group span:hover{
+    background: rgb(255, 193, 77);
+}
+.login-wrapper .login-form input[type="submit"]{
+    margin-top: 10px;
+    outline: none;
+    border: none;
+    background: none;
+    padding: 5px 20px;
+    background:var(--Orange-color);
+    text-decoration: none;
+    color: var(--white-color);
+    letter-spacing: 1px;
+    border-radius: 10px;
+    transition: .1s ease-out;
+    /* text-transform: uppercase; */
+}
+.login-wrapper .login-form input[type="submit"]:hover{
+    opacity: 0.85;
+    cursor: pointer;
+    transform: scale(1.025);
+}
+.form-footer{
+    width: 100%;
+    margin-top: 15px;
+    font-size: smaller;
+    display: flex;
+    justify-content: space-around;
+}
+.form-footer a{
+    text-decoration: none;
+    color: var(--black-color);
+}
+.form-footer a:hover{
+    color: var(--Orange-color);
+    text-decoration: underline;
+}
+
+/* ------------- Not Valid Massage CSS ------------- */
+
+/* #notValidMsg {
+    margin-top: 10px;
+    width: 80%;
+    color: #ba3939;
+    background: #ffe0e0;
+    border: 1px solid #a33a3a;
+    border-radius: 2px;
+    float: left;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    display: none;
+} */

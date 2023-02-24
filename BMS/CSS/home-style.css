@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&family=Raleway:ital,wght@1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: var(--white-color);
+    font-family: 'Oxygen', sans-serif;
+}
+:root{
+    --white-color: #FFFFFF;
+    --lightgray-color : #F9F6F7;
+    --lightOrange-color : #FFE8D6;         /*Declering variable for color */
+    --Orange-color : #FF971D;
+    --black-color : #20262E;
+}
+/* Selection Text Css */
+::selection{
+    background: var(--lightOrange-color);
+    color: var(--black-color);
+}
+
+/* ----------------Corner Ribbon css from csslyout.io------------ */
+.corner-ribbon {
+    position: relative;
+}
+
+.corner-ribbon__inner {
+    /* Displayed at the top left corner */
+    left: -20px;
+    position: absolute;
+    top: 20px;
+
+    /* Size */
+    height: 4rem;
+    width: 10rem;
+
+    /* Hide the part of its children which is displayed outside */
+    /* overflow: hidden; */
+}
+
+.corner-ribbon__ribbon {
+    /* Position */
+    left: 1rem;
+    position: absolute;
+    top: 1rem;
+
+    /* Size */
+    height: 1.5rem;
+    width: 10rem;
+
+    /* Displayed diagonally */
+    transform: translate(-38px, -8px) rotate(-45deg);
+    z-index: 1;
+
+    /* Background color */
+    background-color: var(--Orange-color);
+
+    /* Centerize the text content */
+    text-align: center;
+    color: var(--lightgray-color);
+}
+/* ------------------------------------------ */
+/* Header Section Css */
+header{
+    background: var(--lightOrange-color);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content:  center;
+    position: relative;
+}
+header img{
+    width: 200px;
+}
+header a{
+    position: absolute;
+    right: 1em;
+}
+
+/* --------------------- */
+.loginSection{
+/* background: var(--white-color); */
+height: 500px;
+display: flex;
+}
+.loginSection .img-login{
+    /* border: 1px solid blue; */
+    display: flex;
+    align-items: center;
+    width: 50vw;
+}
+.loginSection .img-login img{
+    width: 100%;
+}
+.loginSection #contect-for{
+    /* border: 1px solid red; */
+    width: 50vw;
+    padding: 0 70px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+}
+.loginSection #contect-for p{
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    text-align: center;
+    line-height: 1.8rem;
+    color: var(--black-color);
+}
+.loginSection #contect-for div{
+    display: flex;
+    justify-content: space-around;
+}
+/* ======================================================== */
+            /* Service section css */
+
+.Section{
+    /* background: pink; */
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+    box-sizing: border-box;
+    position: relative;
+}
+.Section:nth-child(even){
+    background: var(--lightgray-color);
+}
+.Section h1{
+    text-align: center;
+    color: var(--black-color);
+    font-family: 'Raleway', sans-serif;
+    border-bottom:1px solid var(--Orange-color);
+    width: 300px;
+    padding-bottom: 10px;
+    z-index: 1;
+}
+.Section .service-content{
+    /* border: 1px solid #eee; */
+    height: 400px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    z-index: 1;
+}
+.Section .service-content:nth-child(3),
+.Section .service-content:nth-child(5){
+    flex-direction: row-reverse;
+}
+.Section .service-content img{
+    width: 350px;
+    /* border: 1px solid blue; */
+}
+.Section .service-content .service-text{
+    /* border: 1px solid blue; */
+    width: 500px;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+.Section .service-content .service-text h2{
+    font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: 2px;
+    line-height: 50px;
+    color: var(--Orange-color);
+    z-index: 1;
+}
+.Section .service-content .service-text p{
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    z-index: 1;
+}
+/* ======================================== */
+.swiper{
+    overflow: hidden;
+    width: 1000px;
+    margin-top: 10px;
+    /* background: greenyellow; */
+}
+.card-container{
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
+    /* border: 1px solid black; */
+}
+.card-container .card{
+    background: var(--lightgray-color);
+    /* width: 100px; */
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.card-container .card .card-img{
+    width: 150px;
+    height: 150px;
+    background: var(--white-color);
+    border-radius: 50%;
+    border: 1px solid var(--Orange-color);
+    overflow: hidden;
+}
+.card-container .card .card-img img{
+    width: 150px;
+    height: 150px;
+    /* border-radius: 50%; */
+    object-fit: cover;
+}
+.card-container .card .card-info{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--black-color);
+}
+.card-container .card .card-info h2{
+    font-size: 36px;
+    font-family: 'Kaushan Script', cursive;
+    letter-spacing: 3px;
+    color: var(--black-color);
+    margin-bottom: 20px;
+    text-decoration: underline 3px var(--Orange-color);
+}
+.card-container .card .card-info pre{
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-family: 'Caveat', cursive;
+    font-weight: 300;
+    color: var(--black-color);
+}
+/* ====================================================================== */
+.guide-card{
+    /* background: pink; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 50px;
+    width: 700px;
+}
+.guide-card img{
+    width: 200px;
+    border-radius: 50%;
+}
+.guide-card .guide-info h2{
+    font-size: 50px;
+    font-family: 'Kaushan Script', cursive;
+    text-decoration: underline var(--Orange-color);
+}
+/* ======================================================== */
+        /* footer section */
+footer{
+    background: var(--black-color);
+    height: 50px;
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+
+
+
+/* ---------------------- */
+/* utility class  */
+i{
+    font-size: 30px; 
+    color: var(--Orange-color);
+}
+b{
+    color: var(--Orange-color);
+}
+span[class='circle']{
+    position: absolute;
+    background: var(--white-color);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    z-index: -1;
+    margin-top: -70px;
+ }
+a{
+    padding: 5px 20px;
+    background:var(--Orange-color);
+    text-decoration: none;
+    color: var(--white-color);
+    letter-spacing: 1px;
+    border-radius: 10px;
+    transition: .1s ease-out;
+    text-transform: uppercase;
+}
+a:hover{
+    opacity: 0.85;
+    cursor: pointer;
+    transform: scale(1.025);
+}
